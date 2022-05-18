@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { ListData } from './components/ListData';
 import './App.css';
 
 function App() {
+  const arrMobile = ["Samsung", "HTC", "Micromax", "Apple"]
+  const OsList = ["Android", "Blackberry", "iPhone", "Windows Phone"]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+  <h1>React Mobile OS</h1>
+
+  <ListData headerTitle = "Mobile Operating System" dataList={OsList} />
+   <ListData headerTitle = "Mobile Manufactures" dataList={arrMobile} applyCss ='true'  />
     </div>
+    </>
+
   );
 }
 
